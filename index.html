@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pousada - Pedido de Café</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Pedido de Café da Manhã</h1>
+    <p>Preencha abaixo as informações do hóspede 👇</p>
+  </header>
+
+  <form id="pedidoForm">
+
+    <label>Nome do Cliente</label>
+    <input type="text" id="nome" required>
+
+    <label>Rua de Entrega</label>
+    <select id="rua" required>
+      <option value="" disabled selected>Escolha uma rua</option>
+      <option value="Cuba">Rua Cuba</option>
+      <option value="Argentina">Rua Argentina</option>
+    </select>
+
+    <label>Quarto</label>
+    <select id="quarto" required>
+      <option value="" disabled selected>Escolha o quarto</option>
+    </select>
+
+    <label>Quantidade de Hóspedes</label>
+    <input type="number" id="hospedes" min="1" max="10" required>
+
+    <div id="preferencias"></div>
+
+    <label>Horário</label>
+    <select id="horario" required></select>
+
+    <button type="submit">Enviar Pedido</button>
+
+  </form>
+
+  <div id="mensagem"></div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
