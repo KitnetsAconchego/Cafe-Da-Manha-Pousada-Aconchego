@@ -1,50 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pedido Café da Manhã - Pousada Aconchego</title>
+<link rel="stylesheet" href="style.css">
+</head>
 <body>
 
-<h2>Pedido de Café da Manhã</h2>
-<p>Preencha abaixo as informações do hóspede 👇</p>
+<header>
+  <h1>Pedido de Café da Manhã - Pousada Aconchego</h1>
+</header>
 
-<form id="pedidoForm">
-  <label>Nome do Cliente
-    <input type="text" id="nomeCliente" required>
-  </label>
-  
-  <label>Rua de Entrega
-    <select id="ruaEntrega" required>
-      <option value="">Escolha uma rua</option>
-      <option value="Rua A">Rua A</option>
-      <option value="Rua B">Rua B</option>
-      <option value="Rua C">Rua C</option>
-    </select>
-  </label>
-  
-  <label>Quarto
-    <select id="quarto" required>
-      <option value="">Escolha o quarto</option>
-      <option value="101">101</option>
-      <option value="102">102</option>
-      <option value="103">103</option>
-    </select>
-  </label>
-  
-  <label>Quantidade de Hóspedes
-    <input type="number" id="qtdHospedes" required min="1">
-  </label>
-  
-  <label>Horário
-    <select id="horario" required>
-      <option value="07:00">07:00</option>
-      <option value="08:00">08:00</option>
-      <option value="09:00">09:00</option>
-    </select>
-  </label>
-  
-  <button type="submit">Enviar Pedido</button>
-</form>
+<main>
+  <form id="pedidoForm">
+    <label>Nome do Cliente:
+      <input type="text" id="nomeCliente" required>
+    </label>
 
-<p id="msg" style="color: green; font-weight: bold;"></p>
+    <label>Acomodação:
+      <select id="acomodacao" required>
+        <option value="">Selecione a rua</option>
+        <option value="Cuba">Rua Cuba</option>
+        <option value="Argentina">Rua Argentina</option>
+      </select>
+    </label>
 
-<h3>Pedidos Recebidos:</h3>
-<ul id="listaPedidos"></ul>
+    <label>Número do Quarto:
+      <select id="numeroQuarto" required>
+        <option value="">Escolha a rua primeiro</option>
+      </select>
+    </label>
+
+    <label>Horário do Café:
+      <select id="horario" required></select>
+    </label>
+
+    <label>Quantidade de Hóspedes:
+      <input type="number" id="qtdHospedes" min="1" max="10" required>
+    </label>
+
+    <label>Preferenciais:
+      <div id="preferenciaisContainer"></div>
+    </label>
+
+    <button type="submit">Enviar Pedido</button>
+  </form>
+
+  <p id="msg" class="success"></p>
+
+  <a href="lista.html" class="btn-lista">Ir para a Lista de Pedidos</a>
+</main>
 
 <script src="script.js"></script>
 </body>
+</html>
