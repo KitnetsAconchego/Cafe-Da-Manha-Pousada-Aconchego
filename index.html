@@ -1,50 +1,50 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pousada - Pedido de Café</title>
-  <link rel="stylesheet" href="style.css">
-</head>
 <body>
 
-  <header>
-    <h1>Pedido de Café da Manhã</h1>
-    <p>Preencha abaixo as informações do hóspede 👇</p>
-  </header>
+<h2>Pedido de Café da Manhã</h2>
+<p>Preencha abaixo as informações do hóspede 👇</p>
 
-  <form id="pedidoForm">
-
-    <label>Nome do Cliente</label>
-    <input type="text" id="nome" required>
-
-    <label>Rua de Entrega</label>
-    <select id="rua" required>
-      <option value="" disabled selected>Escolha uma rua</option>
-      <option value="Cuba">Rua Cuba</option>
-      <option value="Argentina">Rua Argentina</option>
+<form id="pedidoForm">
+  <label>Nome do Cliente
+    <input type="text" id="nomeCliente" required>
+  </label>
+  
+  <label>Rua de Entrega
+    <select id="ruaEntrega" required>
+      <option value="">Escolha uma rua</option>
+      <option value="Rua A">Rua A</option>
+      <option value="Rua B">Rua B</option>
+      <option value="Rua C">Rua C</option>
     </select>
-
-    <label>Quarto</label>
+  </label>
+  
+  <label>Quarto
     <select id="quarto" required>
-      <option value="" disabled selected>Escolha o quarto</option>
+      <option value="">Escolha o quarto</option>
+      <option value="101">101</option>
+      <option value="102">102</option>
+      <option value="103">103</option>
     </select>
+  </label>
+  
+  <label>Quantidade de Hóspedes
+    <input type="number" id="qtdHospedes" required min="1">
+  </label>
+  
+  <label>Horário
+    <select id="horario" required>
+      <option value="07:00">07:00</option>
+      <option value="08:00">08:00</option>
+      <option value="09:00">09:00</option>
+    </select>
+  </label>
+  
+  <button type="submit">Enviar Pedido</button>
+</form>
 
-    <label>Quantidade de Hóspedes</label>
-    <input type="number" id="hospedes" min="1" max="10" required>
+<p id="msg" style="color: green; font-weight: bold;"></p>
 
-    <div id="preferencias"></div>
+<h3>Pedidos Recebidos:</h3>
+<ul id="listaPedidos"></ul>
 
-    <label>Horário</label>
-    <select id="horario" required></select>
-
-    <button type="submit">Enviar Pedido</button>
-
-  </form>
-
-  <div id="mensagem"></div>
-
-  <script src="script.js"></script>
-
+<script src="script.js"></script>
 </body>
-</html>
